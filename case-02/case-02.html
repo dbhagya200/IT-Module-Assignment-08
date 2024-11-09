@@ -1,131 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Case-02</title>
     <style>
-        body {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-            background-color: #34495e;
-        }
+      body {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        background-color: #34495e;
+      }
 
-        body > div {
-            width: 1200px;
-            height: 350px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-        }
+      body > div {
+        width: 1200px;
+        height: 350px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
 
-        #firstDiv {
-            width: 175px;
-            height: 100px;
-            background-color: lightpink;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
+      #firstDiv {
+        width: 175px;
+        height: 100px;
+        background-color: lightpink;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
 
-        #outerDiv{
-            width: 1200px;
-            height: 136px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-        }
+      #outerDiv {
+        width: 1200px;
+        height: 136px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
 
-        #outerDiv>hr:nth-child(3){
-            position: absolute;
-            bottom: 0;
-            width: inherit;
-        }
+      #outerDiv > hr:nth-child(3) {
+        position: absolute;
+        bottom: 0;
+        width: inherit;
+      }
 
-        .largeDiv {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            width: 750px;
-            height: 100px;
-        }
+      .largeDiv {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 750px;
+        height: 100px;
+      }
 
-        .largeDiv > div {
-            width: 175px;
-        }
+      .largeDiv > div {
+        width: 175px;
+      }
 
-        #secondDiv {
-            background-color: #bb5bc9;
-        }
+      #secondDiv {
+        background-color: #bb5bc9;
+      }
 
-        #thirdDiv {
-            background-color: red;
-        }
+      #thirdDiv {
+        background-color: red;
+      }
 
-        #fourthDiv {
-            background-color: green;
-        }
+      #fourthDiv {
+        background-color: green;
+      }
 
-        #fifthDiv {
-            background-color: blue;
-        }
+      #fifthDiv {
+        background-color: blue;
+      }
 
-        #sixthDiv {
-            background-color: yellow;
-            width: 175px;
-            height: 100px;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-        }
+      #sixthDiv {
+        background-color: yellow;
+        width: 175px;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
     </style>
-</head>
-<body>
-<div>
-    <div id="firstDiv"></div>
-    <div id="outerDiv">
-        <hr>
+  </head>
+  <body>
+    <div>
+      <div id="firstDiv"></div>
+      <div id="outerDiv">
+        <hr />
         <div class="largeDiv">
-            <div id="secondDiv"></div>
-            <div id="thirdDiv"></div>
-            <div id="fourthDiv"></div>
-            <div id="fifthDiv"></div>
+          <div id="secondDiv"></div>
+          <div id="thirdDiv"></div>
+          <div id="fourthDiv"></div>
+          <div id="fifthDiv"></div>
         </div>
-        <hr>
+        <hr />
+      </div>
+      <div id="sixthDiv"></div>
     </div>
-    <div id="sixthDiv"></div>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script>
-        
-let colors = ["lightpink", "#bb5bc9", "red", "green", "blue", "yellow"];
-setInterval(()=>{
-            let last_value=colors.pop();
-            colors.unshift(last_value);
-            console.log(colors);
-    
-            document.getElementById("firstDiv").style.backgroundColor = colors[0];
-            document.getElementById("secondDiv").style.backgroundColor = colors[1]
-            document.getElementById("thirdDiv").style.backgroundColor = colors[2]
-            document.getElementById("fourthDiv").style.backgroundColor = colors[3]
-            document.getElementById("fifthDiv").style.backgroundColor = colors[4]
-            document.getElementById("sixthDiv").style.backgroundColor = colors[5];
-        },1000);
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      let colors = ["lightpink", "#bb5bc9", "red", "green", "blue", "yellow"];
+      setInterval(() => {
+        let last_value = colors.pop();
+        colors.unshift(last_value);
+        console.log(colors);
 
-
-</script>
-</body>
+        document.getElementById("firstDiv").style.backgroundColor = colors[0];
+        document.getElementById("secondDiv").style.backgroundColor = colors[1];
+        document.getElementById("thirdDiv").style.backgroundColor = colors[2];
+        document.getElementById("fourthDiv").style.backgroundColor = colors[3];
+        document.getElementById("fifthDiv").style.backgroundColor = colors[4];
+        document.getElementById("sixthDiv").style.backgroundColor = colors[5];
+      }, 1000);
+    </script>
+  </body>
 </html>
