@@ -29,9 +29,42 @@
         width: 200px;
         height: 180px;
       }
+      #btn01 {
+        margin-top: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 8px;
+        color: white;
+        background-color: red;
+        width: 160px;
+        height: 50px;
+        margin-right: 10%;
+      }
+      #btn02 {
+        margin-top: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 8px;
+        color: white;
+        background-color: blue;
+        width: 160px;
+        height: 50px;
+        margin-right: 10%;
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+      }
+      .btn{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
+    
     <section class="container">
       <div>
         <h1>A</h1>
@@ -79,11 +112,22 @@
       <div class="home">
         <img src="/image/animatie_aanwezigheidssimulatie2.gif" alt="" />
       </div>
+
+      
     </section>
+    <!-- <section class="btn">
+      <div class="buttons">
+        <button id="btn01">Start</button>
+  
+        <button id="btn02">Stop</button>
+      </div>
+    </section> -->
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
       let array = ["A", "B", "c", "D", "E", "F"];
+      
       setInterval(() => {
         let last_value = array.pop();
         array.unshift(last_value);
@@ -96,6 +140,7 @@
         document.getElementsByTagName("h1")[4].innerText = array[4];
         document.getElementsByTagName("h1")[5].innerText = array[5];
       }, 2000);
+     
     </script>
   </body>
 </html>
